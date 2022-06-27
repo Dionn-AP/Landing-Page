@@ -1,3 +1,35 @@
+:root {
+  --color-primary-cyan: #5FB4A2;
+  --color-primery-dark-blue: #203A4C;
+  --color-primery-dark-blue-opacity-0-15: rgb(32, 58, 76, 0.15);
+  --color-primery-grayish-dark-blue: #33323D;
+
+  --color-total-black: #000;
+  --color-total-black-opacity: rgba(0, 0, 0, 0.1);
+  --color-secondary-v-light-grey-opacity-0-9: rgba(250, 250, 250, 0.9);
+  --color-secondary-v-light-grey: #fafafa;
+  --color-secondary-light-grey: #EAEAEB;
+  --color-white: #FFF;
+
+  --color-theme-manage: #f26a47;
+  --color-theme-bookmark: #5267e0;
+  --color-theme-insure: #2d2641;
+  --color-theme-fylo: #41b4d3;
+}
+
+@import url('./global/fonts.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +37,78 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Ibarra Real Nova', serif;
+  font-style: normal;
+  color: var(--color-primery-grayish-dark-blue);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.45px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.2rem;
+  letter-spacing: -0.35px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 36px;
+  letter-spacing: -0.285px;
+}
+
+p {
+  font-family: 'Public Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 3.0rem;
+  color: var(--color-primery-grayish-dark-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  all: unset;
+  padding: 1rem 1.4rem;
+}
+
+input {
+  background-color: var(--color-secondary-light-grey);
+}
+
+input:focus,
+textarea:focus {
+  color: var(--color-primery-grayish-dark-blue);
+}
+
+button {
+  font-family: 'Public Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  padding: 1.7rem 4.5rem;
+  cursor: pointer;
 }
 
 code {
