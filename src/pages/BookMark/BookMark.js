@@ -10,6 +10,8 @@ import MiniBanner2 from '../../assets/mini-banner-bookmark2.svg';
 import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from 'react';
 import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import BannerPages from '../../assets/banner-page-bookmark.svg';
 import Header from '../../components/Header/Header';
@@ -17,11 +19,27 @@ import Footer from '../../components/Footer/Footer';
 
 export default function BookMark() {
 
+    useEffect(() => {
+        const srCards = ScrollReveal({
+            distance: '100px',
+            duration: 2500,
+            reset: false
+        });
+        const srMiniBanner = ScrollReveal({
+            distance: '100px',
+            duration: 2000,
+            reset: false
+        });
+        srCards.reveal('#banner-main', { delay: 0, origin: 'top', });
+        srMiniBanner.reveal('#mini-banner', { delay: 50, origin: 'right' });
+    });
+
     return (
         <WrapperAllPages>
             <GoScrollTop />
             <Header />
             <MainBannerPages
+                id='banner-main'
                 srcImage={BannerPages}
                 alt='mange banner'
             />
@@ -62,10 +80,12 @@ export default function BookMark() {
                         </h3>
                     </WrapperContentPagesTextRight>
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBanner1}
                         alt='banner manage'
                     />
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBanner2}
                         alt='banner manage'
                     />
@@ -78,7 +98,7 @@ export default function BookMark() {
                 linkNext={'/insure'}
             />
             <Footer />
-            <ButtonScrollTop 
+            <ButtonScrollTop
                 colorButtonBack={'--color-theme-bookmark'}
             />
         </WrapperAllPages>

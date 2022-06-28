@@ -5,6 +5,7 @@ import {
     ButtonForm
 } from './Contact.style';
 import { WrapperAllPages } from '../../global/Styles';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
@@ -12,6 +13,7 @@ export default function Contact() {
 
     return (
         <WrapperAllPages>
+            <GoScrollTop />
             <Header />
             <WrapperContentContact>
                 <WrapperTextLeftContactTop>

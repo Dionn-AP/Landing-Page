@@ -14,14 +14,32 @@ import BannerPages from '../../assets/banner-page-insure.svg';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
+import ScrollReveal from 'scrollreveal';
+import { useEffect } from 'react';
 
 export default function Insure() {
+
+    useEffect(() => {
+        const srCards = ScrollReveal({
+            distance: '100px',
+            duration: 2500,
+            reset: false
+        });
+        const srMiniBanner = ScrollReveal({
+            distance: '100px',
+            duration: 2000,
+            reset: false
+        });
+        srCards.reveal('#banner-main', { delay: 0, origin: 'top', });
+        srMiniBanner.reveal('#mini-banner', { delay: 50, origin: 'right' });
+    });
 
     return (
         <WrapperAllPages>
             <GoScrollTop />
             <Header />
             <MainBannerPages
+                id='banner-main'
                 srcImage={BannerPages}
                 alt='mange banner'
             />
@@ -62,10 +80,12 @@ export default function Insure() {
                         </h3>
                     </WrapperContentPagesTextRight>
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBanner1}
                         alt='banner manage'
                     />
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBanner2}
                         alt='banner manage'
                     />
@@ -78,7 +98,7 @@ export default function Insure() {
                 linkNext={'/fylo'}
             />
             <Footer />
-            <ButtonScrollTop 
+            <ButtonScrollTop
                 colorButtonBack={'--color-theme-insure'}
             />
         </WrapperAllPages>

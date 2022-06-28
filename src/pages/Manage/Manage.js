@@ -22,10 +22,17 @@ export default function Manage() {
     useEffect(() => {
         const srCards = ScrollReveal({
             distance: '100px',
-            duration: 2500
+            duration: 2500,
+            reset: false
+        });
+        const srMiniBanner = ScrollReveal({
+            distance: '100px',
+            duration: 2000,
+            reset: false
         });
         srCards.reveal('#banner-main', { delay: 0, origin: 'top', });
-    }, []);
+        srMiniBanner.reveal('#mini-banner', { delay: 50, origin: 'right' });
+    });
 
     return (
         <WrapperAllPages>
@@ -73,10 +80,12 @@ export default function Manage() {
                         </h3>
                     </WrapperContentPagesTextRight>
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBannerManage1}
                         alt='banner manage'
                     />
                     <MiniBannerManage
+                        id='mini-banner'
                         srcImage={MiniBannerManage2}
                         alt='banner manage'
                     />
