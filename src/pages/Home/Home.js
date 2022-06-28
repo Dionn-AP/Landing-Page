@@ -24,15 +24,6 @@ export default function Home() {
             <WrapperHomeBanner>
                 <WrapperContentBanner>
                     <h1>Olá, me chamo Dionnatan Alves e eu amo construir websites lindos</h1>
-                    {/* <WrapperBannerButton
-                        href='#about-me'
-                        onClick={() => window.scroll({ behavior: 'smooth' })}
-                    >
-                        <ImageDivBannerButton>
-                            <ImageBannerButton src={ImageButtonBanner} alt='arrown-down' />
-                        </ImageDivBannerButton>
-                        <BannerButton>SOBRE MIM</BannerButton>
-                    </WrapperBannerButton> */}
                 </WrapperContentBanner>
             </WrapperHomeBanner>
             <WrapperAboutMe id='about-me'>
