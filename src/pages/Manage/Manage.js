@@ -9,6 +9,9 @@ import MiniBannerManage2 from '../../assets/mini-banner-manage2.svg';
 
 import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import ScrollReveal from 'scrollreveal';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
+import { useEffect } from 'react';
 import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import BannerPages from '../../assets/banner-page-manage.svg';
 import Header from '../../components/Header/Header';
@@ -16,10 +19,20 @@ import Footer from '../../components/Footer/Footer';
 
 export default function Manage() {
 
+    useEffect(() => {
+        const srCards = ScrollReveal({
+            distance: '100px',
+            duration: 2500
+        });
+        srCards.reveal('#banner-main', { delay: 0, origin: 'top', });
+    }, []);
+
     return (
         <WrapperAllPages>
+            <GoScrollTop />
             <Header />
             <MainBannerPages
+                id='banner-main'
                 srcImage={BannerPages}
                 alt='mange banner'
             />
@@ -76,7 +89,7 @@ export default function Manage() {
                 linkNext={'/bookmark'}
             />
             <Footer />
-            <ButtonScrollTop 
+            <ButtonScrollTop
                 colorButtonBack={'--color-theme-manage'}
             />
         </WrapperAllPages>

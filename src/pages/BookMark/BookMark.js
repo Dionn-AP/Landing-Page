@@ -10,6 +10,7 @@ import MiniBanner2 from '../../assets/mini-banner-bookmark2.svg';
 import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import BannerPages from '../../assets/banner-page-bookmark.svg';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -18,6 +19,7 @@ export default function BookMark() {
 
     return (
         <WrapperAllPages>
+            <GoScrollTop />
             <Header />
             <MainBannerPages
                 srcImage={BannerPages}

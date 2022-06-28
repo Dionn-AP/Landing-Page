@@ -10,22 +10,43 @@ import BannerInsure from '../../assets/banner-insure.svg';
 import BannerFylo from '../../assets/banner-fylo.svg';
 import MessageContactMe from '../../components/MessageContactMe/MessageContactMe';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
 import { Link } from 'react-router-dom';
 
 export default function Portifolio() {
 
+    useEffect(() => {
+        const srCards = ScrollReveal({
+            distance: '60px',
+            duration: 1500,
+            reset: true
+        })
+        const srScroll = ScrollReveal({
+            distance: '100px',
+            duration: 1000,
+            reset: true
+        });
+        srCards.reveal('#cards-left', { delay: 150, origin: 'left' });
+        srCards.reveal('#cards-right', { delay: 150, origin: 'right' });
+        srScroll.reveal('#scroll', { delay: 100, origin: 'bottom' });
+    }, []);
+
     return (
         <WrapperAllPages>
+            <GoScrollTop />
             <Header />
             <WrapperContentIntoPortifolio>
                 <WrapperContentCards>
                     <BannersPortifolio
+                        id='cards-left'
                         srcImage={BannerManage}
                         alt='mange portifolio'
                     />
-                    <WrapperTextCard>
+                    <WrapperTextCard id='cards-right'>
                         <TextCards>
                             <h2>Manage</h2>
                             <p>
@@ -35,13 +56,15 @@ export default function Portifolio() {
                             </p>
                         </TextCards>
                         <Link to='/manage'>
-                            <ButtonsBackColorNone>VER PROJETO</ButtonsBackColorNone>
+                            <ButtonsBackColorNone
+                                colorAndBorderButton={'--color-theme-manage'}
+                            >VER PROJETO</ButtonsBackColorNone>
                         </Link>
                     </WrapperTextCard>
                 </WrapperContentCards>
 
                 <WrapperContentCards>
-                    <WrapperTextCard>
+                    <WrapperTextCard id='cards-left'>
                         <TextCards>
                             <h2>Bookmark</h2>
                             <p>
@@ -51,10 +74,13 @@ export default function Portifolio() {
                             </p>
                         </TextCards>
                         <Link to='/bookmark'>
-                            <ButtonsBackColorNone>VER PROJETO</ButtonsBackColorNone>
+                            <ButtonsBackColorNone
+                                colorAndBorderButton={'--color-theme-bookmark'}
+                            >VER PROJETO</ButtonsBackColorNone>
                         </Link>
                     </WrapperTextCard>
                     <BannersPortifolio
+                        id='cards-right'
                         srcImage={BannerBookMark}
                         alt='mange portifolio'
                     />
@@ -62,10 +88,11 @@ export default function Portifolio() {
 
                 <WrapperContentCards>
                     <BannersPortifolio
+                        id='cards-left'
                         srcImage={BannerInsure}
                         alt='mange portifolio'
                     />
-                    <WrapperTextCard>
+                    <WrapperTextCard id='cards-right'>
                         <TextCards>
                             <h2>Insure</h2>
                             <p>
@@ -75,13 +102,15 @@ export default function Portifolio() {
                             </p>
                         </TextCards>
                         <Link to='/insure'>
-                            <ButtonsBackColorNone>VER PROJETO</ButtonsBackColorNone>
+                            <ButtonsBackColorNone
+                                colorAndBorderButton={'--color-theme-insure'}
+                            >VER PROJETO</ButtonsBackColorNone>
                         </Link>
                     </WrapperTextCard>
                 </WrapperContentCards>
 
                 <WrapperContentCards>
-                    <WrapperTextCard>
+                    <WrapperTextCard id='cards-left'>
                         <TextCards>
                             <h2>Fylo</h2>
                             <p>
@@ -91,10 +120,13 @@ export default function Portifolio() {
                             </p>
                         </TextCards>
                         <Link to='/fylo'>
-                            <ButtonsBackColorNone>VER PROJETO</ButtonsBackColorNone>
+                            <ButtonsBackColorNone
+                                colorAndBorderButton={'--color-theme-fylo'}
+                            >VER PROJETO</ButtonsBackColorNone>
                         </Link>
                     </WrapperTextCard>
                     <BannersPortifolio
+                        id='cards-right'
                         srcImage={BannerFylo}
                         alt='mange portifolio'
                     />
@@ -102,8 +134,8 @@ export default function Portifolio() {
                 <MessageContactMe />
             </WrapperContentIntoPortifolio>
             <Footer />
-            <ButtonScrollTop 
-                colorButtonBack={'--color-theme-manage'}
+            <ButtonScrollTop
+                colorButtonBack={'--color-primery-dark-blue'}
             />
         </WrapperAllPages>
     )

@@ -13,11 +13,13 @@ import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
 import BannerPages from '../../assets/banner-page-insure.svg';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 
 export default function Insure() {
 
     return (
         <WrapperAllPages>
+            <GoScrollTop />
             <Header />
             <MainBannerPages
                 srcImage={BannerPages}
