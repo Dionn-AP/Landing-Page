@@ -2,18 +2,6 @@ import styled from "styled-components";
 import BannerHome from '../../assets/banner.svg';
 import ImageAboutMe from '../../assets/banner-about-me.svg';
 
-// export const WrapperHome = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     position: relative;
-//     min-height: auto;
-//     max-width: 100vw;
-//     padding: 6rem 16rem 23rem 16rem;
-//     background-color: var(--color-secondary-v-light-grey);
-// `
-
 export const WrapperHomeBanner = styled.div`
     display: flex;
     align-items: flex-end;
@@ -46,7 +34,16 @@ export const WrapperBannerButton = styled.a`
     position: absolute;
     bottom: 0;
     left: 0;
+    scroll-behavior: smooth;
     background-color: var(--color-primery-dark-blue);
+
+    :active {
+        scroll-behavior: smooth;
+    }
+    
+    :hover {
+        opacity: 0.95;
+    }
 `
 
 export const ImageDivBannerButton = styled.div`
