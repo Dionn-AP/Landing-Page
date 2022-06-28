@@ -10,7 +10,9 @@ export default function MessageContactMe() {
                 Interessado em fazer projetos comigo?
             </h2>
             <Link to='/contact'>
-                <ButtonsBackColorNone>CONTATO</ButtonsBackColorNone>
+                <ButtonsBackColorNone
+                    colorAndBorderButton={'--color-primery-dark-blue'}
+                >CONTATO</ButtonsBackColorNone>
             </Link>
         </WrapperMessageHome>
     )
