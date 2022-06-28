@@ -14,24 +14,24 @@ export default function Header() {
                     style={
                         {
                             textDecoration: 'none',
-                            color: (pathname == '/home')
+                            color: (pathname == '/home' || pathname == '/')
                                 ? 'var(--color-primary-cyan)'
                                 : 'var(--color-primery-grayish-dark-blue)'
-                        }}>HOME</Link>
+                        }}><a>HOME</a></Link>
                 <Link to='/portifolio' style={
                     {
                         textDecoration: 'none',
-                        color: (pathname != '/home' && pathname != '/contact')
+                        color: (pathname != '/home' && pathname != '/contact' && pathname !== '/')
                             ? 'var(--color-primary-cyan)'
                             : 'var(--color-primery-grayish-dark-blue)'
-                    }}>PORTIFOLIO</Link>
+                    }}><a>PORTIFOLIO</a></Link>
                 <Link to='/contact' style={
                     {
                         textDecoration: 'none',
                         color: pathname == '/contact'
                             ? 'var(--color-primary-cyan)'
                             : 'var(--color-primery-grayish-dark-blue)'
-                    }}>CONTATO</Link>
+                    }}><a>CONTATO</a></Link>
             </WrapperMenu>
         </WrapperHeader>
     )

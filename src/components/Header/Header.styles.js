@@ -10,7 +10,7 @@ export const WrapperHeader = styled.div`
     margin-bottom: 5.2rem;
 `
 
-export const WrapperMenu = styled.div`
+export const WrapperMenu = styled.nav`
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,7 +19,6 @@ export const WrapperMenu = styled.div`
     letter-spacing: 0.2rem;
     justify-content: space-between;
     color: var(--color-primery-grayish-dark-blue);
-    transition: all 0.3s;
 
     a:hover {
         color: var(--color-primary-cyan);

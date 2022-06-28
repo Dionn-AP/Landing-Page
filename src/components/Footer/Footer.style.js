@@ -29,6 +29,11 @@ export const WrapperMenuFooter = styled.div`
     letter-spacing: 0.2rem;
     justify-content: space-between;
     color: var(--color-primery-grayish-dark-blue);
+
+    a:hover {
+        color: var(--color-primary-cyan);
+        transition: all 0.4s;
+    }
 `
 
 export const WrapperNavSocialNetwork = styled.nav`
@@ -43,5 +48,11 @@ export const ImageSocialNetwork = styled.img`
     height: 3rem;
     width: auto;
     cursor: pointer;
+    transition: all 0.4s;
+
+    :hover {
+        transform: scale(1.1);
+        transition: all 0.4s
+    }
 `
 

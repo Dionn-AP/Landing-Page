@@ -17,9 +17,23 @@ export default function Footer() {
             <WrapperNavPages>
                 <Logo src={LogoWhite} alt='logomark whie' />
                 <WrapperMenuFooter>
-                    <Link to='/home' style={{ textDecoration: 'none', color: 'var(--color-white)' }}>HOME</Link>
-                    <Link to='/portifolio' style={{ textDecoration: 'none', color: 'var(--color-white)' }}>PORTIFOLIO</Link>
-                    <Link to='/contact' style={{ textDecoration: 'none', color: 'var(--color-white)' }}>CONTATO</Link>
+                    <Link
+                        to='/home'
+                        style={{ textDecoration: 'none', color: 'var(--color-white)' }}
+                    ><a>HOME</a>
+                    </Link>
+
+                    <Link
+                        to='/portifolio'
+                        style={{ textDecoration: 'none', color: 'var(--color-white)' }}
+                    ><a>PORTIFOLIO</a>
+                    </Link>
+
+                    <Link
+                        to='/contact'
+                        style={{ textDecoration: 'none', color: 'var(--color-white)' }}
+                    ><a>CONTATO</a>
+                    </Link> 
                 </WrapperMenuFooter>
             </WrapperNavPages>
             <WrapperNavSocialNetwork>
