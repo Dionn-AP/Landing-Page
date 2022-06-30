@@ -1,19 +1,14 @@
-import {
-    WrapperHomeBanner,
-    WrapperContentBanner, BannerButton,
-    WrapperBannerButton, ImageDivBannerButton,
-    ImageBannerButton, WrapperAboutMe, ImageDivAboutMe,
-    TextAboutMe, DivTextAboutMe
-
-} from './Home.style';
-import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import { Link } from 'react-router-dom';
-import ImageButtonBanner from '../../assets/arrow-down-button.svg';
-import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
 import Footer from '../../components/Footer/Footer';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import Header from '../../components/Header/Header';
 import MessageContactMe from '../../components/MessageContactMe/MessageContactMe';
+import { ButtonsBackColorNone, WrapperAllPages } from '../../global/Styles';
+import {
+    DivTextAboutMe, ImageDivAboutMe,
+    TextAboutMe, WrapperAboutMe, WrapperContentBanner, WrapperHomeBanner
+} from './Home.style';
 
 export default function Home() {
 
