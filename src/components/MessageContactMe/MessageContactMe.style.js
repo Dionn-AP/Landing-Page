@@ -11,4 +11,26 @@ export const WrapperMessageHome = styled.div`
     h2 {
         width: 40%;
     }
+
+    @media (max-width: 1264px) {
+        h2 {
+            width: 50%;
+        }
+    }
+
+    @media (max-width: 826px) {
+        h2 {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 575px) {
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 5rem;
+        }
+        
+    }
 `
