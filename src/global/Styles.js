@@ -10,6 +10,22 @@ export const WrapperAllPages = styled.div`
     max-width: 100vw;
     padding: 6rem 16rem 23rem 16rem;
     background-color: var(--color-secondary-v-light-grey);
+
+    @media (max-width: 1389px) {
+        padding: 6rem 12rem 23rem 12rem;
+    }
+
+    @media (max-width: 1264px) {
+        padding: 6rem 8rem 23rem 8rem;
+    }
+
+    @media (max-width: 1064px) {
+        padding: 6rem 6rem 23rem 6rem;
+    }
+
+    @media (max-width: 768px) {
+        padding: 6rem 3rem 23rem 3rem;
+    }
 `
 
 export const WrapperMain = styled.div`
