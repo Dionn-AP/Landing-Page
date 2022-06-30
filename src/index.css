@@ -11,6 +11,7 @@
   --color-secondary-v-light-grey: #fafafa;
   --color-secondary-light-grey: #EAEAEB;
   --color-white: #FFF;
+  --color-white-opacity-0-7: rgb(255, 255, 255, 0.7);
 
   --color-theme-manage: #f26a47;
   --color-theme-bookmark: #5267e0;
