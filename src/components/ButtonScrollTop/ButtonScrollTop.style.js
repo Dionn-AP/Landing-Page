@@ -17,6 +17,14 @@ export const WrapperButtonScroll = styled.a`
         opacity: 0.9;
         transition: all 0.3s;
     }
+
+    @media (max-width: 575px) {
+        bottom: 22rem;
+    }
+
+    @media (max-width: 500px) {
+        bottom: 17rem;
+    }
 `
 
 export const ImageArrowUpScroll = styled.img`
