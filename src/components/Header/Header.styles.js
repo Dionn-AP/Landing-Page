@@ -24,6 +24,10 @@ export const WrapperMenu = styled.nav`
         color: var(--color-primary-cyan);
         transition: all 0.4s;
     }
+
+    @media (max-width: 500px) {
+        margin-left: 1.7rem;
+    }
 `
 
 export const Logo = styled.img`
