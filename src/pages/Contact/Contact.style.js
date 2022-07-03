@@ -9,6 +9,10 @@ export const WrapperContentContact = styled.div`
     width: 100%;
     padding: 4.8rem 0 8rem 0;
     border-top: 0.5px solid var(--color-primery-dark-blue-opacity-0-15);
+
+    @media (max-width: 868px) {
+        flex-direction: column;
+    }
 `
 
 export const WrapperTextLeftContactTop = styled.div`
@@ -18,6 +22,13 @@ export const WrapperTextLeftContactTop = styled.div`
     justify-content: flex-start;
     height: auto;
     width: 45%;
+
+    @media (max-width: 868px) {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
 `
 
 export const WrapperTextRightContactTop = styled.div`
@@ -26,15 +37,29 @@ export const WrapperTextRightContactTop = styled.div`
     align-items: flex-start;
     height: auto;
     width: 55%;
+
+    @media (max-width: 868px) {
+        width: 100%;
+        align-items: center;
+        text-align: justify;
+    }
 `
 
 export const WrapperFormContact = styled.form`
     height: auto;
     width: 55%;
+
+    @media (max-width: 868px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 `
 
-export const WrapperFormInputLabel = styled.form`
+export const WrapperFormInputLabel = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
     margin-bottom: 3rem;
 `
