@@ -5,7 +5,7 @@ export const WrapperMessageHome = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-height: auto;
+    height: auto;
     width: 100%;
 
     h2 {
@@ -27,8 +27,10 @@ export const WrapperMessageHome = styled.div`
     @media (max-width: 575px) {
         flex-direction: column;
         text-align: center;
+        width: 100%;
 
         h2 {
+            width: 100%;
             margin-bottom: 5rem;
         }
         
