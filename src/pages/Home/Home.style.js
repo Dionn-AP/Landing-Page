@@ -107,7 +107,7 @@ export const ImageDivAboutMe = styled.div`
 
     @media (max-width: 610px) {
         height: 35%;
-        background-size: contain;
+        background-size: 100%;
     }
 
     @media (max-width: 580px) {
@@ -156,7 +156,7 @@ export const DivTextAboutMe = styled.div`
     }
 
     @media (max-width: 500px) {
-        height: 65%;
+        height: 75%;
         padding: 0;
     }
 `
@@ -184,7 +184,7 @@ export const TextAboutMe = styled.div`
 
         text-align: left;
         padding-right: 1.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3.2rem;
     }
 
     @media (max-width: 927px) {
