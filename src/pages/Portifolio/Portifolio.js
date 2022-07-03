@@ -1,9 +1,9 @@
 import {
-    WrapperContentCards, BannersPortifolio,
-    WrapperTextCard, TextCards, WrapperContentIntoPortifolio
+    WrapperContentCards, BannersPortifolio, ColumnReverse,
+    WrapperTextCard, TextCards, WrapperContentIntoPortifolio, WrapperPagePortifolio
 } from './Portifolio.style';
 
-import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
+import { ButtonsBackColorNone } from '../../global/Styles';
 import BannerManage from '../../assets/banner-manage.svg';
 import BannerBookMark from '../../assets/banner-bookmark.svg';
 import BannerInsure from '../../assets/banner-insure.svg';
@@ -21,12 +21,12 @@ export default function Portifolio() {
 
     useEffect(() => {
         const srCards = ScrollReveal({
-            distance: '60px',
+            distance: '30px',
             duration: 1500,
             reset: true
         })
         const srScroll = ScrollReveal({
-            distance: '100px',
+            distance: '30px',
             duration: 1000,
             reset: true
         });
@@ -36,9 +36,10 @@ export default function Portifolio() {
     }, []);
 
     return (
-        <WrapperAllPages>
+        <WrapperPagePortifolio>
             <GoScrollTop />
             <Header />
+
             <WrapperContentIntoPortifolio>
                 <WrapperContentCards>
                     <BannersPortifolio
@@ -46,7 +47,10 @@ export default function Portifolio() {
                         srcImage={BannerManage}
                         alt='mange portifolio'
                     />
-                    <WrapperTextCard id='cards-right'>
+                    <WrapperTextCard
+                        id='cards-right'
+                        colorBorderTextCard={'--color-theme-manage'}
+                    >
                         <TextCards>
                             <h2>Manage</h2>
                             <p>
@@ -64,26 +68,31 @@ export default function Portifolio() {
                 </WrapperContentCards>
 
                 <WrapperContentCards>
-                    <WrapperTextCard id='cards-left'>
-                        <TextCards>
-                            <h2>Bookmark</h2>
-                            <p>
-                                Esse projeto me fez criar uma landing page responsiza de acordo com
-                                o design que recebi. Usei HTML5, CSS Grid e JavaScript para as áreas
-                                interativas, como a área de Features.
-                            </p>
-                        </TextCards>
-                        <Link to='/bookmark'>
-                            <ButtonsBackColorNone
-                                colorAndBorderButton={'--color-theme-bookmark'}
-                            >VER PROJETO</ButtonsBackColorNone>
-                        </Link>
-                    </WrapperTextCard>
-                    <BannersPortifolio
-                        id='cards-right'
-                        srcImage={BannerBookMark}
-                        alt='mange portifolio'
-                    />
+                    <ColumnReverse>
+                        <WrapperTextCard
+                            id='cards-left'
+                            colorBorderTextCard={'--color-theme-bookmark'}
+                        >
+                            <TextCards>
+                                <h2>Bookmark</h2>
+                                <p>
+                                    Esse projeto me fez criar uma landing page responsiza de acordo com
+                                    o design que recebi. Usei HTML5, CSS Grid e JavaScript para as áreas
+                                    interativas, como a área de Features.
+                                </p>
+                            </TextCards>
+                            <Link to='/bookmark'>
+                                <ButtonsBackColorNone
+                                    colorAndBorderButton={'--color-theme-bookmark'}
+                                >VER PROJETO</ButtonsBackColorNone>
+                            </Link>
+                        </WrapperTextCard>
+                        <BannersPortifolio
+                            id='cards-right'
+                            srcImage={BannerBookMark}
+                            alt='mange portifolio'
+                        />
+                    </ColumnReverse>
                 </WrapperContentCards>
 
                 <WrapperContentCards>
@@ -92,7 +101,10 @@ export default function Portifolio() {
                         srcImage={BannerInsure}
                         alt='mange portifolio'
                     />
-                    <WrapperTextCard id='cards-right'>
+                    <WrapperTextCard
+                        id='cards-right'
+                        colorBorderTextCard={'--color-theme-insure'}
+                    >
                         <TextCards>
                             <h2>Insure</h2>
                             <p>
@@ -110,33 +122,40 @@ export default function Portifolio() {
                 </WrapperContentCards>
 
                 <WrapperContentCards>
-                    <WrapperTextCard id='cards-left'>
-                        <TextCards>
-                            <h2>Fylo</h2>
-                            <p>
-                                Este projeto foi puramente HTML e CSS. Eu recebi designs mobile e desktop para
-                                construir, então ele foi totalmente responsivo. Eu tomei um caminho mobile-first
-                                e usei CSS moderno como Flexbox e Grid para criar o layout.
-                            </p>
-                        </TextCards>
-                        <Link to='/fylo'>
-                            <ButtonsBackColorNone
-                                colorAndBorderButton={'--color-theme-fylo'}
-                            >VER PROJETO</ButtonsBackColorNone>
-                        </Link>
-                    </WrapperTextCard>
-                    <BannersPortifolio
-                        id='cards-right'
-                        srcImage={BannerFylo}
-                        alt='mange portifolio'
-                    />
+                    <ColumnReverse>
+                        <WrapperTextCard
+                            id='cards-left'
+                            colorBorderTextCard={'--color-theme-fylo'}
+                        >
+                            <TextCards>
+                                <h2>Fylo</h2>
+                                <p>
+                                    Este projeto foi puramente HTML e CSS. Eu recebi designs mobile e desktop para
+                                    construir, então ele foi totalmente responsivo. Eu tomei um caminho mobile-first
+                                    e usei CSS moderno como Flexbox e Grid para criar o layout.
+                                </p>
+                            </TextCards>
+                            <Link to='/fylo'>
+                                <ButtonsBackColorNone
+                                    colorAndBorderButton={'--color-theme-fylo'}
+                                >VER PROJETO</ButtonsBackColorNone>
+                            </Link>
+                        </WrapperTextCard>
+                        <BannersPortifolio
+                            id='cards-right'
+                            srcImage={BannerFylo}
+                            alt='mange portifolio'
+                        />
+                    </ColumnReverse>
                 </WrapperContentCards>
+
                 <MessageContactMe />
             </WrapperContentIntoPortifolio>
+
             <Footer />
             <ButtonScrollTop
                 colorButtonBack={'--color-primery-dark-blue'}
             />
-        </WrapperAllPages>
+        </WrapperPagePortifolio>
     )
 };
