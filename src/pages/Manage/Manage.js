@@ -21,12 +21,12 @@ export default function Manage() {
 
     useEffect(() => {
         const srCards = ScrollReveal({
-            distance: '100px',
+            distance: '50px',
             duration: 2500,
             reset: false
         });
         const srMiniBanner = ScrollReveal({
-            distance: '100px',
+            distance: '30px',
             duration: 2000,
             reset: false
         });
