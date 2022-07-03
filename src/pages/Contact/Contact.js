@@ -4,12 +4,29 @@ import {
     InputFormContact, WrapperFormInputLabel, TextAreaContact,
     ButtonForm
 } from './Contact.style';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { WrapperAllPages } from '../../global/Styles';
 import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import MessageSendEmail from '../../components/MessageSendEmail/MessageSendEmail';
 
 export default function Contact() {
+    const [open, setOpen] = useState(false);
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_p0ka32q', 'template_wiqivhe', form.current, '-QM_59DwS51owAPXD')
+            .then((result) => {
+                setOpen(true);
+            }, (error) => {
+                setOpen(false);
+            });
+    };
 
     return (
         <WrapperAllPages>
@@ -36,28 +53,45 @@ export default function Contact() {
                 <WrapperTextLeftContactTop>
                     <h2>Contato</h2>
                 </WrapperTextLeftContactTop>
-                <WrapperFormContact>
+                <WrapperFormContact ref={form} onSubmit={sendEmail}>
                     <WrapperFormInputLabel>
                         <label>Nome</label>
-                        <InputFormContact />
+                        <InputFormContact
+                            type='text'
+                            name='user_name'
+                        />
                     </WrapperFormInputLabel>
                     <WrapperFormInputLabel>
                         <label>E-mail</label>
-                        <InputFormContact />
+                        <InputFormContact
+                            type='text'
+                            name='user_email'
+                        />
                     </WrapperFormInputLabel>
                     <TextAreaContact>
                         <label>Menssagem</label>
                         <textarea
+                            name='message'
                             rows={3}
                             cols={100}
                             maxLength={300}
                         >
                         </textarea>
                     </TextAreaContact>
-                    <ButtonForm>ENVIAR</ButtonForm>
+                    <ButtonForm
+                        type='submit'
+                        value='Send'
+                    >ENVIAR</ButtonForm>
                 </WrapperFormContact>
             </WrapperContentContact>
             <Footer />
+            {
+                open &&
+                <MessageSendEmail
+                    open={open}
+                    setOpen={setOpen}
+                />
+            }
         </WrapperAllPages>
     )
 };
