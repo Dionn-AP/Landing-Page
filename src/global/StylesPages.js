@@ -12,11 +12,20 @@ export const WraaperManage = styled.div`
 export const MainBannerPages = styled.div`
     height: 55rem;
     width: 100%;
-    background-image: ${ props => `url(${props.srcImage})`};
+    background-image: ${props => `url(${props.srcImage})`};
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     margin-bottom: 11rem;
+
+    @media (max-width: 860px) {
+        height: 38rem;
+        margin-bottom: 0;
+        background-clip: content-box;
+        background-position: center;
+        background-size: cover;
+        box-shadow: var(--color-boxshadow-text-card-portifolio);
+    }
 `
 
 export const WrapperContentPages = styled.div`
@@ -27,6 +36,10 @@ export const WrapperContentPages = styled.div`
     height: auto;
     width: 100%;
     margin-bottom: 6.4rem;
+
+    @media (max-width: 860px) {
+        flex-direction: column;
+    }
 `
 
 export const WrapperContentPagesLeft = styled.div`
@@ -35,6 +48,12 @@ export const WrapperContentPagesLeft = styled.div`
     align-items: flex-start;
     height: auto;
     width: 30%;
+
+    @media (max-width: 860px) {
+        align-items: center;
+        width: 100%;
+        margin-bottom: 12.5rem;
+    }
 `
 
 export const WrapperContentPagesTextLeft = styled.div`
@@ -57,6 +76,11 @@ export const WrapperContentPagesTextLeft = styled.div`
         color: var(--color-primary-cyan);
         margin-bottom: 1.6rem;
     }
+
+    @media (max-width: 860px) {
+        align-items: center;
+        text-align: justify;
+    }
 `
 
 export const WrapperContentPagesRight = styled.div`
@@ -66,6 +90,11 @@ export const WrapperContentPagesRight = styled.div`
     justify-content: space-between;
     height: auto;
     width: 55%;
+
+    @media (max-width: 860px) {
+        align-items: center;
+        width: 100%;
+    }
 `
 
 export const WrapperContentPagesTextRight = styled.div`
@@ -83,14 +112,30 @@ export const WrapperContentPagesTextRight = styled.div`
     p {
         margin-bottom: 4rem;
     }
+
+    @media (max-width: 860px) {
+        align-items: center;
+        text-align: justify;
+
+        p {
+            margin-bottom: 7rem;
+        }
+    }
 `
 
 export const MiniBannerManage = styled.div`
     height: 40rem;
     width: 100%;
-    background-image: ${ props => `url(${props.srcImage})`};
+    background-image: ${props => `url(${props.srcImage})`};
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     margin-bottom: 3.2rem;
+
+    @media (max-width: 860px) {
+        height: 26rem;
+        box-shadow: var(--color-boxshadow-text-card-portifolio);
+        background-clip: content-box;
+        background-size: cover;
+    }
 `
