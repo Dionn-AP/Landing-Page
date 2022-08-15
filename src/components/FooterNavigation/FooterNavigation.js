@@ -23,7 +23,6 @@ export default function FooterNavigation({titlePrev, titleNext, linkPrev, linkNe
                     </WrapperTextLeftNavigation>
                 </WrapperLeftNavigation>
             </Link>
-
             <Link to={linkNext}>
                 <WrapperRightNavigation>
                     <WrapperTextRightNavigation>
@@ -35,7 +34,6 @@ export default function FooterNavigation({titlePrev, titleNext, linkPrev, linkNe
                     <ImageFlowPages src={IconArrowRight} alt='arrow right' />
                 </WrapperRightNavigation>
             </Link>
-
         </WrapperFooterNavigation>
     )
 };
