@@ -1,21 +1,21 @@
 import {
-    MainBannerPages, WrapperContentPages, WrapperContentPagesLeft,
-    WrapperContentPagesTextLeft, WrapperContentPagesRight,
-    WrapperContentPagesTextRight, MiniBannerManage
+    MainBannerPages, MiniBannerManage, WrapperContentPages,
+    WrapperContentPagesLeft, WrapperContentPagesRight,
+    WrapperContentPagesTextLeft, WrapperContentPagesTextRight
 } from '../../global/StylesPages';
+import { ButtonsBackColorNone, WrapperAllPages } from '../../global/Styles';
 
 import MiniBanner1 from '../../assets/mini-banner-insure1.svg';
 import MiniBanner2 from '../../assets/mini-banner-insure2.svg';
-
-import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
-import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
-import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
-import BannerPages from '../../assets/banner-page-insure.svg';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
-import ScrollReveal from 'scrollreveal';
 import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import BannerPages from '../../assets/banner-page-insure.svg';
+import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import Footer from '../../components/Footer/Footer';
+import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
+import Header from '../../components/Header/Header';
+
 
 export default function Insure() {
 
@@ -61,7 +61,6 @@ export default function Insure() {
                         colorAndBorderButton={'--color-theme-insure'}
                     >VISITAR</ButtonsBackColorNone>
                 </WrapperContentPagesLeft>
-
                 <WrapperContentPagesRight>
                     <WrapperContentPagesTextRight>
                         <h3>

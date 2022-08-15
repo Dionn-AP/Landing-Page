@@ -1,21 +1,22 @@
+import { ButtonsBackColorNone } from '../../global/Styles';
 import {
-    WrapperContentCards, BannersPortifolio, ColumnReverse,
-    WrapperTextCard, TextCards, WrapperContentIntoPortifolio, WrapperPagePortifolio
+    BannersPortifolio, ColumnReverse, TextCards,
+    WrapperContentCards, WrapperContentIntoPortifolio,
+    WrapperPagePortifolio, WrapperTextCard
 } from './Portifolio.style';
 
-import { ButtonsBackColorNone } from '../../global/Styles';
-import BannerManage from '../../assets/banner-manage.svg';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ScrollReveal from 'scrollreveal';
 import BannerBookMark from '../../assets/banner-bookmark.svg';
-import BannerInsure from '../../assets/banner-insure.svg';
 import BannerFylo from '../../assets/banner-fylo.svg';
-import MessageContactMe from '../../components/MessageContactMe/MessageContactMe';
+import BannerInsure from '../../assets/banner-insure.svg';
+import BannerManage from '../../assets/banner-manage.svg';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
+import Footer from '../../components/Footer/Footer';
 import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
 import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import { useEffect } from 'react';
-import ScrollReveal from 'scrollreveal';
-import { Link } from 'react-router-dom';
+import MessageContactMe from '../../components/MessageContactMe/MessageContactMe';
 
 export default function Portifolio() {
 
@@ -39,7 +40,6 @@ export default function Portifolio() {
         <WrapperPagePortifolio>
             <GoScrollTop />
             <Header />
-
             <WrapperContentIntoPortifolio>
                 <WrapperContentCards>
                     <BannersPortifolio
@@ -66,7 +66,6 @@ export default function Portifolio() {
                         </Link>
                     </WrapperTextCard>
                 </WrapperContentCards>
-
                 <WrapperContentCards>
                     <ColumnReverse>
                         <WrapperTextCard
@@ -94,7 +93,6 @@ export default function Portifolio() {
                         />
                     </ColumnReverse>
                 </WrapperContentCards>
-
                 <WrapperContentCards>
                     <BannersPortifolio
                         id='cards-left'
@@ -120,7 +118,6 @@ export default function Portifolio() {
                         </Link>
                     </WrapperTextCard>
                 </WrapperContentCards>
-
                 <WrapperContentCards>
                     <ColumnReverse>
                         <WrapperTextCard
@@ -148,10 +145,8 @@ export default function Portifolio() {
                         />
                     </ColumnReverse>
                 </WrapperContentCards>
-
                 <MessageContactMe />
             </WrapperContentIntoPortifolio>
-
             <Footer />
             <ButtonScrollTop
                 colorButtonBack={'--color-primery-dark-blue'}

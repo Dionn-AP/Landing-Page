@@ -6,7 +6,6 @@ import {
 
 import MiniBanner1 from '../../assets/mini-banner-fylo1.svg';
 import MiniBanner2 from '../../assets/mini-banner-fylo2.svg';
-
 import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';

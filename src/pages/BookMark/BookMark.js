@@ -6,7 +6,6 @@ import {
 
 import MiniBanner1 from '../../assets/mini-banner-bookmark1.svg';
 import MiniBanner2 from '../../assets/mini-banner-bookmark2.svg';
-
 import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';

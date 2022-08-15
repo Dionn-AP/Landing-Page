@@ -1,21 +1,20 @@
+import { ButtonsBackColorNone, WrapperAllPages } from '../../global/Styles';
 import {
-    MainBannerPages, WrapperContentPages, WrapperContentPagesLeft,
-    WrapperContentPagesTextLeft, WrapperContentPagesRight,
-    WrapperContentPagesTextRight, MiniBannerManage
+    MainBannerPages, MiniBannerManage, WrapperContentPages,
+    WrapperContentPagesLeft, WrapperContentPagesRight,
+    WrapperContentPagesTextLeft, WrapperContentPagesTextRight
 } from '../../global/StylesPages';
 
+import { useEffect } from 'react';
+import ScrollReveal from 'scrollreveal';
+import BannerPages from '../../assets/banner-page-manage.svg';
 import MiniBannerManage1 from '../../assets/mini-banner-manage1.svg';
 import MiniBannerManage2 from '../../assets/mini-banner-manage2.svg';
-
-import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
 import ButtonScrollTop from '../../components/ButtonScrollTop/ButtonScrollTop';
-import ScrollReveal from 'scrollreveal';
-import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
-import { useEffect } from 'react';
-import { WrapperAllPages, ButtonsBackColorNone } from '../../global/Styles';
-import BannerPages from '../../assets/banner-page-manage.svg';
-import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
+import FooterNavigation from '../../components/FooterNavigation/FooterNavigation';
+import GoScrollTop from '../../components/GoScrollTop/GoScrollTop';
+import Header from '../../components/Header/Header';
 
 export default function Manage() {
 
@@ -61,7 +60,6 @@ export default function Manage() {
                         colorAndBorderButton={'--color-theme-manage'}
                     >VISITAR</ButtonsBackColorNone>
                 </WrapperContentPagesLeft>
-
                 <WrapperContentPagesRight>
                     <WrapperContentPagesTextRight>
                         <h3>

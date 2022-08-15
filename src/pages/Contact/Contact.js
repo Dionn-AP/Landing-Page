@@ -14,7 +14,6 @@ import MessageSendEmail from '../../components/MessageSendEmail/MessageSendEmail
 
 export default function Contact() {
     const [open, setOpen] = useState(false);
-
     const form = useRef();
 
     const sendEmail = (e) => {
